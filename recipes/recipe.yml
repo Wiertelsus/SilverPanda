@@ -24,8 +24,8 @@ modules:
       PRETTY_NAME: SilverPanda
       
   - type: dnf
-    repos:
-      copr:
+    #repos:
+     # copr:
       #  - atim/starship
     install:
       packages:
