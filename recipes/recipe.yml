@@ -31,18 +31,18 @@ modules:
       packages:
       #  - micro
       #  - starship
-      - fish
-      - qemu
-      - qemu-kvm
-      - virt-manager
-      - libvirt
-      - virt-install
-      - libvirt-daemon-config-network
-      - libvirt-daemon-kvm
-      - libguestfs-tools
-      - util-linux
-      - ptyxis
-      - fastfetch
+        - fish
+        - qemu
+        - qemu-kvm
+        - virt-manager
+        - libvirt
+        - virt-install
+        - libvirt-daemon-config-network
+        - libvirt-daemon-kvm
+        - libguestfs-tools
+        - util-linux
+        - ptyxis
+        - fastfetch
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
