@@ -59,10 +59,6 @@ modules:
         - com.github.neithern.g4music
         - io.gitlab.librewolf-community
       - scope: user # Also add Flathub user repo, but no user packages
-  
-  - type: script
-    scripts:
-      - setup-libvirt.sh
 
   - type: files
     files:
