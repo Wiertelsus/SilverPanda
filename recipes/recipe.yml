@@ -7,15 +7,15 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
   - type: files
     files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+      - source: etc/libvirt
+        destination: /etc/libvirt/
 
   - type: os-release
     properties:
@@ -64,5 +64,8 @@ modules:
         - com.github.neithern.g4music
         - io.gitlab.librewolf-community
       - scope: user # Also add Flathub user repo, but no user packages
+  - type: script
+    scripts:
+      - setup-libvirt.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
