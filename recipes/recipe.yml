@@ -60,10 +60,10 @@ modules:
         - io.gitlab.librewolf-community
         - dev.zed.Zed
       - scope: user # Also add Flathub user repo, but no user packages
-
+      
   - type: files
     files:
-      - source: etc/libvirt
-        destination: /etc/libvirt
+      - source: system   # copies `files/system/*` (* means everything inside it) into your image's root folder `/`
+        destination: /
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
