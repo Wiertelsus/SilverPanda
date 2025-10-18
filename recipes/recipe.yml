@@ -38,6 +38,7 @@ modules:
         - util-linux
         - ptyxis
         - fastfetch
+        - git-credential-libsecret
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
