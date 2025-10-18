@@ -12,11 +12,6 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: etc/libvirt
-        destination: /etc/libvirt/
-
   - type: os-release
     properties:
       ID: silver_panda
@@ -64,8 +59,14 @@ modules:
         - com.github.neithern.g4music
         - io.gitlab.librewolf-community
       - scope: user # Also add Flathub user repo, but no user packages
+  
   - type: script
     scripts:
       - setup-libvirt.sh
+
+  - type: files
+    files:
+      - source: etc/libvirt
+        destination: /etc/libvirt
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
