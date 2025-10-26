@@ -19,7 +19,10 @@ modules:
       PRETTY_NAME: SilverPanda
       
   - type: dnf
-    #repos:
+    repos:
+      files:
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      
      # copr:
       #  - atim/starship
     install:
@@ -39,6 +42,7 @@ modules:
         - ptyxis
         - fastfetch
         - git-credential-libsecret
+        - tailscale
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
