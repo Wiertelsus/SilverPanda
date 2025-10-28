@@ -22,6 +22,7 @@ modules:
     repos:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       
      # copr:
       #  - atim/starship
